@@ -12,7 +12,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class HelloWorldTest {
-
+    public static final String BASE_URI = "http://localhost:"+Main.PORT+"/demo-app/";
     private HttpServer server;
     private WebTarget target;
 
@@ -30,7 +30,7 @@ public class HelloWorldTest {
         // --
         // c.configuration().enable(new org.glassfish.jersey.media.json.JsonJaxbFeature());
 
-        target = c.target(Main.BASE_URI);
+        target = c.target(BASE_URI);
     }
 
     @After
