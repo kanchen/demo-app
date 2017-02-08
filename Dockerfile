@@ -13,7 +13,7 @@ RUN mvn install
 # rest of the project
 COPY src /opt/app/src
 RUN mvn package
-RUN mvn exec:java -Dexec.args="800"
+RUN mvn exec:java -Dexec.args="1600"
 
 # local application port
 EXPOSE 8080
