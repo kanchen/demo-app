@@ -1,4 +1,4 @@
-package com.dekses.jersey.docker.demo;
+package com.izops.jersey.docker.demo;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;

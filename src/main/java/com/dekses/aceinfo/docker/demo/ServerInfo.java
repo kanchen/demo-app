@@ -1,4 +1,4 @@
-package com.dekses.jersey.docker.demo;
+package com.izops.jersey.docker.demo;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

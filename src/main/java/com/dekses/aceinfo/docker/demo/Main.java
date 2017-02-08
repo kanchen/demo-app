@@ -1,4 +1,4 @@
-package com.dekses.jersey.docker.demo;
+package com.izops.jersey.docker.demo;
 
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -28,7 +28,7 @@ public class Main {
     public static HttpServer httpServer() {
         // create a resource config that scans for JAX-RS resources and providers
         // in com.dekses.jersey.docker.demo package
-        final ResourceConfig rc = new ResourceConfig().packages("com.dekses.jersey.docker.demo");
+        final ResourceConfig rc = new ResourceConfig().packages("com.izops.jersey.docker.demo");
 
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
@@ -66,12 +66,23 @@ public class Main {
      * @throws IOException
      */
     public static void main(String[] args) {
-        new WorkerThread().start();
+        Thread worker = new WorkerThread();
+        worker.start();
+
+        int millis = 7600;
 
         try {
-            Thread.sleep(7500);
+            if (args.length > 0) {
+                millis = Integer.parseInt(args[0]);
+            }
+            Thread.sleep(millis);
         } catch (InterruptedException e) {
             // handle here exception
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (args.length > 0) {
+            worker.stop();
         }
     }
 }

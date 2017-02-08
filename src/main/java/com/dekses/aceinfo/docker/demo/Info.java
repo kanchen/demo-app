@@ -1,4 +1,4 @@
-package com.dekses.jersey.docker.demo;
+package com.izops.jersey.docker.demo;
 
 import java.net.InetAddress;
 import java.net.Inet4Address;
