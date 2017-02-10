@@ -104,11 +104,11 @@
                     <mainClass>com.izops.jersey.docker.demo.Main</mainClass>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>2.3</version>
-            </plugin>
+          <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.2</version>
+          </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -126,7 +126,7 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+      </build>
 
     <properties>
         <jersey.version>2.22.2</jersey.version>
