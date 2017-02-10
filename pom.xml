@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>demo-app</name>
 
-    <dependencyManagement>
+    <!--dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.glassfish.jersey</groupId>
@@ -19,17 +19,19 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement>
+    </dependencyManagement-->
 
     <dependencies>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-grizzly2-http</artifactId>
+            <version>${jersey.version}</version>
         </dependency>
         <!-- uncomment this to get JSON support: -->
          <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-moxy</artifactId>
+            <version>${jersey.version}</version>
         </dependency>
         <!-- uncomment this to get JSON support: -->
         <dependency>
